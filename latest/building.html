@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Building &mdash; Development Documentation v0.9.0, Document version git-sha1-fd6b27c documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Testing" href="test.html" />
+    <link rel="prev" title="Repository structure" href="repostruct.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Development Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                version: v0.9.0<br/>latest docs: git-sha1-fd6b27c<br/><a style="color:white" href="https://github.com/torxakis/develdocs/releases/download/develop/TorXakis-v0.9.0_DeveloperGuide-git-sha1-fd6b27c.pdf">pdf</a>
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">TorXakis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="repostruct.html">Repository structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compiler-warnings-are-treated-as-errors">Compiler warnings are treated as errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sqatt.html">Benchmarking: simple quality assurance tests for TorXakis (sqatt)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqatt.html#integration-tests">Integration tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#adding-new-tests">Adding new tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#long-running-tests">Long-running tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqatt.html#benchmarks">Benchmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#tests-for-the-benchmarks">Tests for the benchmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">Continuous Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="website.html">Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Development Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Building</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/torxakis/develdocs/blob/master/source/building.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="test.html" class="btn btn-neutral float-right" title="Testing" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+      
+        <a href="repostruct.html" class="btn btn-neutral float-left" title="Repository structure" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building">
+<h1>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h1>
+<p>Make sure that
+<code class="docutils literal notranslate"><span class="pre">`stack</span></code> &lt;<a class="reference external" href="https://docs.haskellstack.org/en/stable/install_and_upgrade/">https://docs.haskellstack.org/en/stable/install_and_upgrade/</a>&gt;`__
+is installed, then clone this repository. <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> requires a
+<code class="docutils literal notranslate"><span class="pre">stack</span></code> version <code class="docutils literal notranslate"><span class="pre">1.6.1</span></code> or greater. To build and install
+<code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> locally, if you are on a Windows system run:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>stack setup
+stack install
+</pre></div>
+</div>
+<p>On Linux, the following libraries should be installed:</p>
+<ul class="simple">
+<li><p>libgmp-dev</p></li>
+</ul>
+<p>For Unix systems a different stack configuration is used:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>stack setup --stack-yaml stack_linux.yaml
+stack install --stack-yaml stack_linux.yaml
+</pre></div>
+</div>
+<p>The reason for having two configuration files is that on Windows systems
+the libraries are linked statically, and thus we cannot use the
+<code class="docutils literal notranslate"><span class="pre">integer-gmp</span></code> library, since <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> is licensed under the <a class="reference external" href="LICENSE">BSD3
+license</a>.</p>
+<p>In the instructions that follow we will omit the
+<code class="docutils literal notranslate"><span class="pre">--stack-yaml</span> <span class="pre">stack-linux.yaml</span></code> flag, but bear in mind that if you’re
+in an Unix system you need to add it (or set the <code class="docutils literal notranslate"><span class="pre">STACK_YAML</span></code>
+environment variable to “stack-linux.yaml”)</p>
+<p>If you experience problems when building from source, sometimes this
+could be due to Makefiles which do not handle parallel builds well. If
+problems appear while building, try setting the <code class="docutils literal notranslate"><span class="pre">MAKEFLAGS</span></code> variable
+to <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">-j1</span> <span class="pre">&quot;</span></code> before running the build commands. For instance on Unix
+systems this can be achieved by running:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MAKEFLAGS</span><span class="o">=</span><span class="s2">&quot; -j1 &quot;</span>
+stack setup
+stack install
+</pre></div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">MAKEFLAGS</span></code> variable does not affect the parallelism
+within <code class="docutils literal notranslate"><span class="pre">stack</span></code> itself.</p>
+<div class="section" id="compiler-warnings-are-treated-as-errors">
+<h2>Compiler warnings are treated as errors<a class="headerlink" href="#compiler-warnings-are-treated-as-errors" title="Permalink to this headline">¶</a></h2>
+<p>By default, several compiler warnings are treated as errors. While
+developing we’d like to avoid this: removing warnings requires some
+extra time. Some parts of the code might not make it when submitting a
+pull request. Therefore, before a new feature or fix is ready, it
+doesn’t make sense to try to remove warnings on code that will be
+deleted in the end. So to have the build system avoid treating warnings
+as errors use the flag <code class="docutils literal notranslate"><span class="pre">develop</span></code> as follows:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>stack &lt;STACK ARGS&gt; --flag <span class="s1">&#39;*:develop&#39;</span>
+</pre></div>
+</div>
+<p>For instance:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>stack <span class="nb">test</span> --stack-yaml stack_linux.yaml --file-watch txs-compiler  --ta <span class="s2">&quot;-m wrong&quot;</span> --flag <span class="s1">&#39;*:develop&#39;</span>
+</pre></div>
+</div>
+<p>Note that currently only the package <code class="docutils literal notranslate"><span class="pre">txs-compiler</span></code> supports this
+flag. If you find yourself needing this flag for other packages feel
+free to submit an issue or pull request.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test.html" class="btn btn-neutral float-right" title="Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="repostruct.html" class="btn btn-neutral float-left" title="Repository structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, torxakis.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
