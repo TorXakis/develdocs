@@ -82,8 +82,6 @@ else:
 
 handle.write("DOCUMENT_NAME=" + document_name + "\n")
 
-if githubenv: handle.close() 
-
 pdfdocumenturl="https://github.com/{0}/{1}/releases/download/{2}/{3}.pdf".format(github_user_or_organisation,
                 github_repo_name,release_name,document_name)
 
@@ -117,6 +115,31 @@ except NameError:
   rst_epilog=""
 rst_epilog = rst_epilog + url_and_versions
   
+# -- get the filename of the build pdf (SPHINX_BUILD_PDF) ----------
+
+# NOTE: SPHINX_BUILD_PDF is exported to be used in github actions workflow
+
+
+def slugify(value, allow_unicode=False):
+    """
+    Convert to ASCII if 'allow_unicode' is False. Convert spaces to hyphens.
+    Remove characters that aren't alphanumerics, underscores, or hyphens.
+    Convert to lowercase. Also strip leading and trailing whitespace.
+    """
+    import unicodedata
+    import re
+    value = str(value)
+    if allow_unicode:
+        value = unicodedata.normalize('NFKC', value)
+    else:
+        value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+    value = re.sub(r'[^\w\s-]', '', value.lower()).strip()
+    return re.sub(r'[\s]+', '', value)
+
+
+output_pdf="build/latex/" + slugify(project) + ".pdf"
+handle.write("SPHINX_BUILD_PDF=" + output_pdf + "\n")
+if githubenv: handle.close() 
 
 
 
