@@ -5,7 +5,7 @@
 
 # -- manual configuration  -----------------------------------------------------
 
-github_user_or_organisation='harcokuppens'
+github_user_or_organisation='torxakis'
 github_repo_name="develdocs"
 
 # when publishing documentation as file assets on github use following filename:
@@ -34,6 +34,7 @@ with open('TOOLVERSION.txt') as f:
     toolversion = f.readline()
 toolversion=toolversion.strip()    
 
+import os,sys
 import subprocess
 tag=subprocess.check_output(["git","tag", "--points-at","HEAD"],encoding="utf-8").strip()
 print("tag="+tag)
@@ -70,7 +71,18 @@ release= toolversion + ", " + pdf_docversion
 
 
 document_name = document_name_format.format(TOOLVERSION=toolversion,DOCVERSION=docversion)
-print("::set-env name=DOCUMENT_NAME::" + document_name)
+
+githubenv=os.environ.get('GITHUB_ENV')
+if githubenv:
+    print("using GITHUB_ENV\n")
+    handle = open(githubenv, 'a') 
+else:
+    print("NOT using GITHUB_ENV\n")
+    handle = sys.stdout
+
+handle.write("DOCUMENT_NAME=" + document_name + "\n")
+
+if githubenv: handle.close() 
 
 pdfdocumenturl="https://github.com/{0}/{1}/releases/download/{2}/{3}.pdf".format(github_user_or_organisation,
                 github_repo_name,release_name,document_name)
@@ -105,6 +117,8 @@ except NameError:
   rst_epilog=""
 rst_epilog = rst_epilog + url_and_versions
   
+
+
 
 
 # -- Configuration for HTML output -------------------------------------------------
