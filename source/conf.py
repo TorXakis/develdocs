@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Development Documentation'
+project = 'TorXakis'
 copyright = '2020, torxakis'
 author = 'torxakis'
 
