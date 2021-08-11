@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>TorXakis &mdash; TorXakis v0.9.0, Document version git-sha1-ee2aa09 documentation</title>
+  <title>Packaging &mdash; TorXakis v0.9.0, Document version git-sha1-ee2aa09 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Repository structure" href="repostruct.html" />
-    <link rel="prev" title="TorXakis Development Documentation" href="index.html" /> 
+    <link rel="next" title="Configuration of access in github" href="githubpermissions.html" />
+    <link rel="prev" title="Building" href="building.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,8 +93,8 @@
             
               <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TorXakis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">TorXakis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="repostruct.html">Repository structure</a></li>
@@ -102,11 +102,11 @@
 <li class="toctree-l2"><a class="reference internal" href="building.html#compiler-warnings-are-treated-as-errors">Compiler warnings are treated as errors</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="packaging.html">Packaging</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="packaging.html#approach">Approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packaging.html#windows">Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packaging.html#macos">Macos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packaging.html#linux">Linux</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Packaging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#approach">Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">Macos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="githubpermissions.html">Configuration of access in github</a><ul>
@@ -184,14 +184,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>TorXakis</li>
+      <li>Packaging</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/torxakis/develdocs/blob/main/source/intro.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/torxakis/develdocs/blob/main/source/packaging.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -202,10 +202,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="repostruct.html" class="btn btn-neutral float-right" title="Repository structure" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="githubpermissions.html" class="btn btn-neutral float-right" title="Configuration of access in github" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="TorXakis Development Documentation" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="building.html" class="btn btn-neutral float-left" title="Building" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -214,38 +214,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torxakis">
-<h1>TorXakis<a class="headerlink" href="#torxakis" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> is a tool for Model Based Testing.</p>
-<p>It is licensed under the <a class="reference external" href="LICENSE">BSD3 license</a>.</p>
-<p>TorXakis is written in <a class="reference external" href="https://www.haskell.org">Haskell</a> and uses
-<code class="docutils literal notranslate"><span class="pre">`stack</span></code> &lt;<a class="reference external" href="https://www.haskellstack.org">https://www.haskellstack.org</a>&gt;`__ as build tool. In addition
-TorXakis needs an
-<a class="reference external" href="https://en.wikipedia.org/wiki/Satisfiability_modulo_theories">SMT</a>
-solver, such as <a class="reference external" href="http://cvc4.cs.stanford.edu/web/">cvc4</a> or
-<a class="reference external" href="https://github.com/Z3Prover/z3">Z3</a>. The SMT Solver needs to support
-<a class="reference external" href="http://smtlib.cs.uiowa.edu/">SMTLIB</a> version 2.5, <a class="reference external" href="https://en.wikipedia.org/wiki/Algebraic_data_type">Algebraic Data
-Types</a> (as
-proposed for version 2.6), and
-<a class="reference external" href="http://cvc4.cs.stanford.edu/wiki/Strings">Strings</a>. The SMT Solvers
-are assumed to be located on the
-<a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a>. For
-development acceptance tests
-<a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">javac</a>
-is needed.</p>
-<p>The Haddock documentation is also available
-<a class="reference external" href="https://torxakis.github.io/TorXakis/doc/index.html">here</a>.</p>
-<div class="section" id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
-<p>Part of the research and development of TorXakis is carried out</p>
-<ul class="simple">
-<li><p>as part of the NWO-TTW project 13859: SUMBAT: Supersizing Model-Based
-Testing.</p></li>
-<li><p>as part of the Enable-S3 program under the responsibility of ESI
-(TNO) with Philips as the carrying industrial partner. The Enable-S3
-research is supported by the Netherlands Ministry of Economic Affairs
-(Toeslag voor Topconsortia voor Kennis en Innovatie).</p></li>
-</ul>
+  <div class="section" id="packaging">
+<h1>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="approach">
+<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> depends on <code class="docutils literal notranslate"><span class="pre">cvc4</span></code> or <code class="docutils literal notranslate"><span class="pre">z3</span></code> tools. If such a depending tool gets upgraded it can break <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code>.
+We therefore bundle these depending tools in the <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> package so that it always works. When installed only
+<code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> can run these specific versions of the tools.  The system can have a different versions of these tools
+installed, which however are not used by <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> which uses its own versions.</p>
+<p>When using separate install of these dependency tools, we could more easily update them in case of security leaks, but
+at the cost of possible breaking <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code>. However we prefer to have  <code class="docutils literal notranslate"><span class="pre">TorXakis</span></code> with fixed dependencies versions which will not break, because that is more
+important for us then  the security risk.</p>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="macos">
+<h2>Macos<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<p>homebrew package includes  <code class="docutils literal notranslate"><span class="pre">cvc4</span></code> or <code class="docutils literal notranslate"><span class="pre">z3</span></code> tools
+torxakis is wrapper script which</p>
+</div>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -255,8 +245,8 @@ research is supported by the Netherlands Ministry of Economic Affairs
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="repostruct.html" class="btn btn-neutral float-right" title="Repository structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="TorXakis Development Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="githubpermissions.html" class="btn btn-neutral float-right" title="Configuration of access in github" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="building.html" class="btn btn-neutral float-left" title="Building" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

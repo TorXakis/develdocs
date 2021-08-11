@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Configuration of access in github &mdash; TorXakis v0.9.0, Document version git-sha1-ee2aa09 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Testing" href="test.html" />
+    <link rel="prev" title="Packaging" href="packaging.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TorXakis
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                version: v0.9.0<br/>latest docs: git-sha1-ee2aa09<br/><a style="color:white" href="https://github.com/torxakis/develdocs/releases/download/develop/TorXakis-v0.9.0_DeveloperGuide-git-sha1-ee2aa09.pdf">pdf</a>
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">TorXakis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="repostruct.html">Repository structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="building.html#compiler-warnings-are-treated-as-errors">Compiler warnings are treated as errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packaging.html">Packaging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packaging.html#approach">Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packaging.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packaging.html#macos">Macos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packaging.html#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration of access in github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#role">Role</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#permission-level">Permission level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sqatt.html">Benchmarking: simple quality assurance tests for TorXakis (sqatt)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqatt.html#integration-tests">Integration tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#adding-new-tests">Adding new tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#long-running-tests">Long-running tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqatt.html#benchmarks">Benchmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqatt.html#tests-for-the-benchmarks">Tests for the benchmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">Continuous Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="website.html">Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TorXakis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Configuration of access in github</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/torxakis/develdocs/blob/main/source/githubpermissions.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="test.html" class="btn btn-neutral float-right" title="Testing" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+      
+        <a href="packaging.html" class="btn btn-neutral float-left" title="Packaging" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration-of-access-in-github">
+<h1>Configuration of access in github<a class="headerlink" href="#configuration-of-access-in-github" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="role">
+<h2>Role<a class="headerlink" href="#role" title="Permalink to this headline">¶</a></h2>
+<p>src: <a class="reference external" href="https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/permission-levels-for-an-organization">https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/permission-levels-for-an-organization</a></p>
+<p>a person can be given a general role type:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>collaborator</dt><dd><p>give external people read(write) access to only specific repositories</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>member of organization</dt><dd><ul>
+<li><p>gets a member’s default permissions which you can configure in the organisation settings</p></li>
+<li><p>members can be grouped in a team, where a team can be given more permissions</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>owner of organization</dt><dd><ul>
+<li><p>has full control over everything in organization (kind of root)</p></li>
+<li><p>this role should be limited, but to no less than two people, in your organization.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="permission-level">
+<h2>Permission level<a class="headerlink" href="#permission-level" title="Permalink to this headline">¶</a></h2>
+<p>a person or team can be given a specific “permission level” to some repo.
+eg. give person/team  “Admin” permission level:</p>
+<ul class="simple">
+<li><p>goto repo url <a class="reference external" href="https://github.com/ORGANISATION/REPONAME">https://github.com/ORGANISATION/REPONAME</a></p></li>
+<li><p>click above on page on “settings”</p></li>
+<li><p>on left menu click on “Manage access”</p></li>
+<li><p>an overview is shown of people and their access rights</p></li>
+<li><p>if a specific person or team is not listed,
+then on the right top click on “Invite teams or people” button
+then in popup window</p>
+<ul>
+<li><p>type name of person or team</p></li>
+<li><p>select <code class="docutils literal notranslate"><span class="pre">Admin</span></code> role
+and click “add ..” button on the bottom</p></li>
+</ul>
+</li>
+<li><p>if a specific person or team is already listed then using the select box behind them you can change the permission level</p></li>
+</ul>
+<p>The page <a class="reference external" href="https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization">https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization</a>
+lists the possible permissions for an organization repository are:</p>
+<dl class="simple">
+<dt>Read:</dt><dd><p>Recommended for non-code contributors who want to view or discuss your project</p>
+</dd>
+<dt>Triage:</dt><dd><p>Recommended for contributors who need to proactively manage issues and pull requests without write access</p>
+</dd>
+<dt>Write:</dt><dd><p>Recommended for contributors who actively push to your project</p>
+</dd>
+<dt>Maintain:</dt><dd><p>Recommended for project managers who need to manage the repository without access to sensitive or destructive actions</p>
+</dd>
+<dt>Admin:</dt><dd><p>Recommended for people who need full access to the project, including sensitive and destructive actions like managing security or deleting a repository</p>
+</dd>
+</dl>
+<p>The table at <a class="reference external" href="https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization#repository-access-for-each-permission-level">https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-permission-levels-for-an-organization#repository-access-for-each-permission-level</a>
+explicitly tells what actions a “permission level” can do.</p>
+<p>From this table I got the following important notes:</p>
+<ul class="simple">
+<li><p>To push to a normal branch you need “Write” permission
+however to push to protected branches you need “Maintain” or “Admin” permission.</p></li>
+<li><p>Protected branches are branches where you are required to do pull requests to get something pushed to.
+To merge a pull request in protected branch you must be allowed to push to the protected branch.
+So to merge a pull request you need “Maintain” or “Admin” permission.</p></li>
+<li><p>Only with the “Admin” you can “Merge pull requests on protected branches, even if there are no approving reviews”.
+So in general you do not want to give people that permission. So “Maintain” permission is then better to give.</p></li>
+</ul>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>make only a few people owner:  pierre and me owner (and torxakis account)</p></li>
+<li><p>make people who only need access to a single repo an outside collaborator for which we specifically set some
+access permission to only that specific repository. All other repositories are inaccesible.</p></li>
+<li><p>members of the organisation have by default “Read” permission to all repositories in
+the organisation. To give them more permissions
+add them to one of the following teams:</p>
+<ul>
+<li><p>developers team    =&gt;  “Write” permission ; cannot merge pull request</p></li>
+<li><p>maintainers team =&gt; “Maintain” permission; can merge pull request</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test.html" class="btn btn-neutral float-right" title="Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="packaging.html" class="btn btn-neutral float-left" title="Packaging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, torxakis.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
