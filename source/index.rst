@@ -21,6 +21,8 @@ TorXakis API documentation can be found at: https://harcokuppens.github.io/TorXa
    intro
    repostruct
    building
+   packaging
+   githubpermissions
    test
    sqatt
    continuousintegration.rst
