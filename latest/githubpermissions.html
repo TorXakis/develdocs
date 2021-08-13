@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Configuration of access in github &mdash; TorXakis v0.9.0, Document version git-sha1-ee2aa09 documentation</title>
+  <title>Configuration of access in github &mdash; TorXakis v0.9.0, Document version git-sha1-8f83887 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Testing" href="test.html" />
-    <link rel="prev" title="Packaging" href="packaging.html" /> 
+    <link rel="next" title="Glossary" href="glossary.html" />
+    <link rel="prev" title="Documentation" href="documentation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                version: v0.9.0<br/>latest docs: git-sha1-ee2aa09<br/><a style="color:white" href="https://github.com/torxakis/develdocs/releases/download/develop/TorXakis-v0.9.0_DeveloperGuide-git-sha1-ee2aa09.pdf">pdf</a>
+                version: v0.9.0<br/>latest docs: git-sha1-8f83887<br/><a style="color:white" href="https://github.com/torxakis/develdocs/releases/download/develop/TorXakis-v0.9.0_DeveloperGuide-git-sha1-8f83887.pdf">pdf</a>
               </div>
             
           
@@ -92,7 +92,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">TorXakis</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#acknowledgements">Acknowledgements</a></li>
 </ul>
@@ -107,12 +107,6 @@
 <li class="toctree-l2"><a class="reference internal" href="packaging.html#windows">Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packaging.html#macos">Macos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packaging.html#linux">Linux</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration of access in github</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#role">Role</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#permission-level">Permission level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="test.html">Testing</a></li>
@@ -134,7 +128,18 @@
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendices</span></p>
-<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration of access in github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#intro">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#role">Role</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#permission-level">Permission level</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lookup-permissions-of-a-person">Lookup permissions of a person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-permissions-of-a-person">Change permissions of a person</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
@@ -202,10 +207,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="test.html" class="btn btn-neutral float-right" title="Testing" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="packaging.html" class="btn btn-neutral float-left" title="Packaging" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="documentation.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -216,13 +221,23 @@
             
   <div class="section" id="configuration-of-access-in-github">
 <h1>Configuration of access in github<a class="headerlink" href="#configuration-of-access-in-github" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>Github  assigns each person a role which generally describes it type of access within a Github organisation.
+However Github allows to specify access more granular by assigning permission levels
+to persons or teams for specific repositories. So you can either give a person directly more permissions
+to a repository, or assign a person to a team which has more rights to a repository.</p>
+</div>
 <div class="section" id="role">
 <h2>Role<a class="headerlink" href="#role" title="Permalink to this headline">¶</a></h2>
 <p>src: <a class="reference external" href="https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/permission-levels-for-an-organization">https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/permission-levels-for-an-organization</a></p>
 <p>a person can be given a general role type:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>collaborator</dt><dd><p>give external people read(write) access to only specific repositories</p>
+<dt>collaborator</dt><dd><ul>
+<li><p>give external people read(write) access to only specific repositories</p></li>
+<li><p>for TorXakis collaborators are listed at: <a class="reference external" href="https://github.com/orgs/TorXakis/outside-collaborators">https://github.com/orgs/TorXakis/outside-collaborators</a></p></li>
+</ul>
 </dd>
 </dl>
 </li>
@@ -230,6 +245,7 @@
 <dt>member of organization</dt><dd><ul>
 <li><p>gets a member’s default permissions which you can configure in the organisation settings</p></li>
 <li><p>members can be grouped in a team, where a team can be given more permissions</p></li>
+<li><p>for TorXakis members are listed at: <a class="reference external" href="https://github.com/orgs/TorXakis/people">https://github.com/orgs/TorXakis/people</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -238,6 +254,7 @@
 <dt>owner of organization</dt><dd><ul>
 <li><p>has full control over everything in organization (kind of root)</p></li>
 <li><p>this role should be limited, but to no less than two people, in your organization.</p></li>
+<li><p>for TorXakis look at people’s page for person with Owner label: <a class="reference external" href="https://github.com/orgs/TorXakis/people">https://github.com/orgs/TorXakis/people</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -246,15 +263,38 @@
 </div>
 <div class="section" id="permission-level">
 <h2>Permission level<a class="headerlink" href="#permission-level" title="Permalink to this headline">¶</a></h2>
-<p>a person or team can be given a specific “permission level” to some repo.
+<div class="section" id="lookup-permissions-of-a-person">
+<h3>Lookup permissions of a person<a class="headerlink" href="#lookup-permissions-of-a-person" title="Permalink to this headline">¶</a></h3>
+<p>Look up the permissions for a person for all repositories:</p>
+<ul class="simple">
+<li><p>goto the organisation’s people page: <a class="reference external" href="https://github.com/orgs/TorXakis/people">https://github.com/orgs/TorXakis/people</a></p></li>
+<li><p>find the person of interest in the list</p></li>
+<li><p>at the person’s row clich the select box and select <code class="docutils literal notranslate"><span class="pre">Manage</span></code></p></li>
+<li><p>you are redirected to a page which lists for all repositories in the organisation what access
+level the person has</p></li>
+<li><p>when you click on the <code class="docutils literal notranslate"><span class="pre">Manage</span></code> button behind a repository you get redirected to
+a page which display how this access level is determined.</p></li>
+</ul>
+</div>
+<div class="section" id="change-permissions-of-a-person">
+<h3>Change permissions of a person<a class="headerlink" href="#change-permissions-of-a-person" title="Permalink to this headline">¶</a></h3>
+<p>A person can be given more permissions by making the person member of a team with more permissions”</p>
+<ul class="simple">
+<li><p>goto the organisation’s teams page: <a class="reference external" href="https://github.com/orgs/TorXakis/teams">https://github.com/orgs/TorXakis/teams</a></p></li>
+<li><p>click on the team you want the person to be assigned to</p></li>
+<li><p>on the specific team’s page click on the top on <code class="docutils literal notranslate"><span class="pre">Members</span></code></p></li>
+<li><p>on the members page use the search box to search for the person you want to add, and then click the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">a</span> <span class="pre">member</span></code> button.</p></li>
+</ul>
+<p>A person or team can be given a specific “permission level” to some repo.
 eg. give person/team  “Admin” permission level:</p>
 <ul class="simple">
-<li><p>goto repo url <a class="reference external" href="https://github.com/ORGANISATION/REPONAME">https://github.com/ORGANISATION/REPONAME</a></p></li>
-<li><p>click above on page on “settings”</p></li>
-<li><p>on left menu click on “Manage access”</p></li>
+<li><p>goto a repository’s url <a class="reference external" href="https://github.com/ORGANISATION/REPONAME">https://github.com/ORGANISATION/REPONAME</a> &lt;br&gt;
+e.g. <a class="reference external" href="https://github.com/orgs/TorXakis/TorXakis">https://github.com/orgs/TorXakis/TorXakis</a></p></li>
+<li><p>click above on page on <code class="docutils literal notranslate"><span class="pre">Settings</span></code></p></li>
+<li><p>on left menu click on <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">access</span></code></p></li>
 <li><p>an overview is shown of people and their access rights</p></li>
 <li><p>if a specific person or team is not listed,
-then on the right top click on “Invite teams or people” button
+then on the right top click on <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">teams</span> <span class="pre">or</span> <span class="pre">people</span></code> button
 then in popup window</p>
 <ul>
 <li><p>type name of person or team</p></li>
@@ -282,29 +322,31 @@ lists the possible permissions for an organization repository are:</p>
 explicitly tells what actions a “permission level” can do.</p>
 <p>From this table I got the following important notes:</p>
 <ul class="simple">
-<li><p>To push to a normal branch you need “Write” permission
-however to push to protected branches you need “Maintain” or “Admin” permission.</p></li>
+<li><p>To push to a normal branch you need <code class="docutils literal notranslate"><span class="pre">Write</span></code> permission
+however to push to protected branches you need <code class="docutils literal notranslate"><span class="pre">Maintain</span></code> or <code class="docutils literal notranslate"><span class="pre">Admin</span></code> permission.</p></li>
 <li><p>Protected branches are branches where you are required to do pull requests to get something pushed to.
 To merge a pull request in protected branch you must be allowed to push to the protected branch.
-So to merge a pull request you need “Maintain” or “Admin” permission.</p></li>
-<li><p>Only with the “Admin” you can “Merge pull requests on protected branches, even if there are no approving reviews”.
-So in general you do not want to give people that permission. So “Maintain” permission is then better to give.</p></li>
+So to merge a pull request you need <code class="docutils literal notranslate"><span class="pre">Maintain</span></code> or <code class="docutils literal notranslate"><span class="pre">Admin</span></code> permission.</p></li>
+<li><p>Only with the <code class="docutils literal notranslate"><span class="pre">Admin</span></code> you can do the action <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">pull</span> <span class="pre">requests</span> <span class="pre">on</span> <span class="pre">protected</span> <span class="pre">branches,</span> <span class="pre">even</span> <span class="pre">if</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">no</span> <span class="pre">approving</span> <span class="pre">reviews</span></code>.
+So in general you do not want to give people that permission. So <code class="docutils literal notranslate"><span class="pre">Maintain</span></code> permission is then better to give.</p></li>
 </ul>
+</div>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>make only a few people owner:  pierre and me owner (and torxakis account)</p></li>
+<li><p>make only a few people <code class="docutils literal notranslate"><span class="pre">Owner</span></code>.</p></li>
 <li><p>make people who only need access to a single repo an outside collaborator for which we specifically set some
-access permission to only that specific repository. All other repositories are inaccesible.</p></li>
-<li><p>members of the organisation have by default “Read” permission to all repositories in
-the organisation. To give them more permissions
+access permission to only that specific repository. All other repositories are inaccessible.</p></li>
+<li><p>members of the organisation have by default <code class="docutils literal notranslate"><span class="pre">Read</span></code> permission to all repositories in
+the organisation. Note that this default permission can be changed. To give them more permissions
 add them to one of the following teams:</p>
 <ul>
-<li><p>developers team    =&gt;  “Write” permission ; cannot merge pull request</p></li>
-<li><p>maintainers team =&gt; “Maintain” permission; can merge pull request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Develop</span></code> team: <code class="docutils literal notranslate"><span class="pre">Write</span></code> permission ; cannot merge pull request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Maintain</span></code> team:  <code class="docutils literal notranslate"><span class="pre">Maintain</span></code> permission; can merge pull request</p></li>
 </ul>
 </li>
+<li><p>note: for some repositories in the organisation the above teams may have no rights configured.</p></li>
 </ul>
 </div>
 </div>
@@ -315,8 +357,8 @@ add them to one of the following teams:</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="test.html" class="btn btn-neutral float-right" title="Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="packaging.html" class="btn btn-neutral float-left" title="Packaging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="documentation.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
