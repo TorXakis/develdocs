@@ -29,6 +29,7 @@ Linux
 MacOS
 ~~~~~
 
+On MacOS we use homebrew to package and install torxakis. Initially it was attempted to include the SMT solvers 
 homebrew package includes  ``cvc4`` or ``z3`` tools
 torxakis is wrapper script which
 
@@ -58,11 +59,17 @@ The different brew packages and the urls where they install there bottles:
 
 
 
+Build bottle for ``TorXakis``
+-----------------------------
+
+::
+
   brew install --build-bottle   torxakis/torxakis/cvc4\&1.7 
   brew bottle   harcokuppens/torxakis/cvc4\&1.7  
   
 It generates a bottle file ``cvc4@1.7--1.7.arm64_monterey.bottle.1.tar.gz``. Rename the file to ``cvc4@1.7-1.7.arm64_monterey.bottle.tar.gz``  by removing the 
-rebuild number '.1.' and the double '--', and the upload this file to the  `cvc4_1.7` release section of the ``Dependencies`` github project at ``https://github.com/TorXakis/Dependencies/``. 
-Homebrew will use the ``root_url`` of ``https://github.com/TorXakis/Dependencies/cvc4_1.7/` in the ``cvc4@1.7.rb`` Formula to find a bottle file for you MacOS version. If it cannot find one for your
-version of MacOS it will take the bottle of an older MacOS version closest to your current version. 
+rebuild number '.1.' and the double '--', and then upload this file to the  `cvc4_1.7` release section of the ``Dependencies`` github project at ``https://github.com/TorXakis/Dependencies/``. 
+
+
+On installing ``TorXakis`` homebrew will use the ``root_url`` of ``https://github.com/TorXakis/Dependencies/cvc4_1.7/` in the ``cvc4@1.7.rb`` Formula to find a bottle for you MacOS version. If it cannot find one for your version of MacOS it will take the bottle of an older MacOS version closest to your current version. 
 
