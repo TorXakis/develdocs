@@ -1,66 +1,61 @@
 Packaging
 =========
 
+For easy installation of ``TorXakis``  we have to package it in a binary packages for the specific operating system. 
+
 Approach
 ~~~~~~~~~
 
+On each operating system we use stack to build the ``torxakis`` and ``txsserver`` executables which only depend
+on standard dynamic libraries provided by the operating system. Therefore we only have to bundle these in a package.
+
 ``TorXakis`` depends on ``cvc4`` or ``z3`` tools. If such a depending tool gets upgraded it can break ``TorXakis``.
-We therefore bundle these depending tools in the ``TorXakis`` package so that it always works. When installed only
-``TorXakis`` can run these specific versions of the tools.  The system can have a different versions of these tools
+We therefore bundle these depending tools in the ``TorXakis`` package so that it always works. We install these tools
+such that they are only exclusively available for ``TorXakis``.  The system can have a different versions of these tools
 installed, which however are not used by ``TorXakis`` which uses its own versions.
 
 When using separate install of these dependency tools, we could more easily update them in case of security leaks, but
-at the cost of possible breaking ``TorXakis``. However we prefer to have  ``TorXakis`` with fixed dependencies versions which will not break, because that is more
-important for us then  the security risk.
-
+at the cost of possible breaking ``TorXakis``. However we prefer to have  ``TorXakis`` with fixed dependencies versions
+which will not break, because that is more important for us then  the security risk.
 
 Windows
 ~~~~~~~
 
-Macos
+
+Linux
+~~~~~
+
+
+MacOS
 ~~~~~
 
 homebrew package includes  ``cvc4`` or ``z3`` tools
 torxakis is wrapper script which
 
-Linux
-~~~~~
 
-
-
-Packaging: building binary packages for easy installation
-=========================================================
-
-Introduction
-~~~~~~~~~~~~
-
-In this chapter we describe how we build packages for ``TorXakis`` for the different operating systems it supports.
-
-
-Linux
-~~~~~
-
-
-MacOs
-~~~~~
 
 For ``MacOS`` we use the homebrew packaging tool to install and distribute the ``TorXakis`` package.
-
 
 The different brew packages and the urls where they install there bottles:
 
 * torxakis:
-**  browse: https://github.com/TorXakis/TorXakis/releases/tag/v0.9.0/ 
-**  root_url:  https://github.com/TorXakis/TorXakis/releases/download/v0.9.0/ 
-**  example bottle: https://github.com/TorXakis/TorXakis/releases/download/v0.9.0/torxakis-0.9.0.arm64_monterey.bottle.tar.gz
+
+  *  browse: https://github.com/TorXakis/TorXakis/releases/tag/v0.9.0/ 
+  *  root_url:  https://github.com/TorXakis/TorXakis/releases/download/v0.9.0/ 
+  *  example bottle: https://github.com/TorXakis/TorXakis/releases/download/v0.9.0/torxakis-0.9.0.arm64_monterey.bottle.tar.gz
+
 * z3: 
-**  browse: https://github.com/TorXakis/Dependencies/releases/tag/z3-4.8.7/
-**  root_url: https://github.com/TorXakis/Dependencies/releases/download/z3-4.8.7/
-**  example bottle: https://github.com/TorXakis/Dependencies/releases/download/z3-4.8.7/z3@4.8.7-4.8.7.arm64_monterey.bottle.tar.gz
+  
+  *  browse: https://github.com/TorXakis/Dependencies/releases/tag/z3-4.8.7/
+  *  root_url: https://github.com/TorXakis/Dependencies/releases/download/z3-4.8.7/
+  *  example bottle: https://github.com/TorXakis/Dependencies/releases/download/z3-4.8.7/z3@4.8.7-4.8.7.arm64_monterey.bottle.tar.gz
+
 * cvc4: https://github.com/TorXakis/Dependencies/releases/tag/cvc4_1.7/ 
-**  browse: https://github.com/TorXakis/Dependencies/releases/tag/cvc4_1.7/
-**  root_url:  https://github.com/TorXakis/Dependencies/releases/download/cvc4_1.7/
-**  example bottle:  https://github.com/TorXakis/Dependencies/releases/download/cvc4_1.7/cvc4@1.7-1.7.arm64_monterey.bottle.tar.gz
+
+  *  browse: https://github.com/TorXakis/Dependencies/releases/tag/cvc4_1.7/
+  *  root_url:  https://github.com/TorXakis/Dependencies/releases/download/cvc4_1.7/
+  *  example bottle:  https://github.com/TorXakis/Dependencies/releases/download/cvc4_1.7/cvc4@1.7-1.7.arm64_monterey.bottle.tar.gz
+
 
 
   brew install --build-bottle   torxakis/torxakis/cvc4\&1.7 
