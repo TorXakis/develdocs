@@ -30,6 +30,7 @@ TorXakis API documentation can be found at: https://harcokuppens.github.io/TorXa
    test
    sqatt
    continuousintegration.rst
+   packaging
    website
    documentation
 
