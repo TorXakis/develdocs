@@ -15,8 +15,13 @@ For other versions see the `documentation overview webpage <DOCUMENT_OVERVIEW_UR
 TorXakis API documentation can be found at: https://harcokuppens.github.io/TorXakis/ 
 
 
+.. note maxdepth:1  only applies for main html page on rhs; in html lhs is full toc in menu is shown;
+                    in pdf both in bookmarks and document full toc is shown (uses latex toc)
+
+
 .. toctree::
    :caption: Contents
+   :maxdepth: 1
 
    intro
    repostruct
@@ -28,11 +33,15 @@ TorXakis API documentation can be found at: https://harcokuppens.github.io/TorXa
    website
    documentation
 
+.. raw:: latex
+
+   \appendix
+
 
 
 .. toctree::
    :caption: Appendices
-   :hidden:
+   :maxdepth: 1
 
    githubpermissions
    glossary
